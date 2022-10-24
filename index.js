@@ -112,42 +112,42 @@ const connectToWA = () => {
 				}
 					break
 
-					case 'alive': {
+				case 'alive': {
 
-						const startmsg = `
+					const startmsg = `
 	🔰 තුෂාන් ධර්මේන්ද්‍ර Online Accounting වෙත ඔබ සාදරයෙන් පිලිගනිමි.
 	
 	🔰 ඔබගේ අවශ්‍යතාවය පහත *'View Menu'* භාවිත කර තෝරාගන්න.
 	
 	🍁 Thank You 🍁
 	━━━━━━━━━━━`
-	
-						const sections = [
-							{
-								title: "🍁 තුෂාන් ධර්මේන්ද්‍ර Online Accounting 🍁",
-								rows: [
-									{ title: "☞︎︎︎  පන්තියට සහභාගීවන ආකාරය", rowId: prefix + 'howreg' },
-									{ title: "☞︎︎︎  පන්තියට ලියාපදිංචි වීමට", rowId: "clreg" },
-									{ title: "☞︎︎︎  පන්ති ගාස්තු ගෙවීම", rowId: "pymnt" },
-									{ title: "☞︎︎︎  Group වලට Links ලබා ගැනීමට", rowId: "glinks" },
-									{ title: "☞︎︎︎  පංති ගාස්තු පිලිබද විස්තර", rowId: "cfees" },
-									{ title: "☞︎︎︎  පංති කාලසටහන", rowId: "ctable" },
-									{ title: "☞︎︎︎  නිබන්ධන ලබා ගන්නා ආකාරය", rowId: "tutesget" },
-									{ title: "☞︎︎︎  මගහැරුන පාඩම් ලබා ගැනීමට", rowId: "prevless" },
-									{ title: "☞︎︎︎  තුෂාන් ධර්මේන්ද්‍ර සර් ගැන", rowId: "about" }
-								]
-							}
-						]
-						const listMessage = {
-							text: startmsg,
-							footer: config.TVFOOTER,
-							title: "*🍁 🅆🄴🄻🄲🄾🄼🄴 🍁*",
-							buttonText: "View Menu",
-							sections
+
+					const sections = [
+						{
+							title: "🍁 තුෂාන් ධර්මේන්ද්‍ර Online Accounting 🍁",
+							rows: [
+								{ title: "☞︎︎︎  පන්තියට සහභාගීවන ආකාරය", rowId: prefix + 'howreg' },
+								{ title: "☞︎︎︎  පන්තියට ලියාපදිංචි වීමට", rowId: "clreg" },
+								{ title: "☞︎︎︎  පන්ති ගාස්තු ගෙවීම", rowId: "pymnt" },
+								{ title: "☞︎︎︎  Group වලට Links ලබා ගැනීමට", rowId: "glinks" },
+								{ title: "☞︎︎︎  පංති ගාස්තු පිලිබද විස්තර", rowId: "cfees" },
+								{ title: "☞︎︎︎  පංති කාලසටහන", rowId: "ctable" },
+								{ title: "☞︎︎︎  නිබන්ධන ලබා ගන්නා ආකාරය", rowId: "tutesget" },
+								{ title: "☞︎︎︎  මගහැරුන පාඩම් ලබා ගැනීමට", rowId: "prevless" },
+								{ title: "☞︎︎︎  තුෂාන් ධර්මේන්ද්‍ර සර් ගැන", rowId: "about" }
+							]
 						}
-							await conn.sendMessage(from, listMessage)
+					]
+					const listMessage = {
+						text: startmsg,
+						footer: config.TVFOOTER,
+						title: "*🍁 🅆🄴🄻🄲🄾🄼🄴 🍁*",
+						buttonText: "View Menu",
+						sections
 					}
-						break
+					await conn.sendMessage(from, listMessage)
+				}
+					break
 
 				//......................................................How To Register..............................................................\\
 
@@ -182,16 +182,16 @@ const connectToWA = () => {
 					const startmsg = `*🍁 පන්තියට ලියාපදිංචි වීමට 🍁*
 
 🔰 පහළ Link එකෙන් ලබා දී ඇති *Form* එක පුරවා අපගේ Online Class එකේ Register වන්න.
-
+					
 🔰 ඔබ සහභාගී වීමට බලාපොරොත්තු වන පංතියද ඊට ඇතුළත් කරන්න.
-
-  》 https://forms.gle/Lx11hrHtYxZLYh539
-	
+					
+   》 https://forms.gle/Lx11hrHtYxZLYh539
+						
 🍁 Thank You 🍁
 ━━━━━━━━━━━`
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } },
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -226,7 +226,7 @@ const connectToWA = () => {
 					await conn.sendMessage(from, buttonMessage)
 				}
 					break
-				
+
 				//......................................................Group Links..............................................................\\
 
 				case 'glinks': {
@@ -349,7 +349,7 @@ const connectToWA = () => {
 				}
 					break
 
-									//.......................................................Get Tutes...............................................................\\
+				//.......................................................Get Tutes...............................................................\\
 
 				case 'tutesget': {
 
@@ -381,9 +381,9 @@ const connectToWA = () => {
 				}
 					break
 
-					case 'prevless': {
+				case 'prevless': {
 
-						const startmsg = `*🍁 මගහැරුන පාඩම් ලබා ගැනීම 🍁*
+					const startmsg = `*🍁 මගහැරුන පාඩම් ලබා ගැනීම 🍁*
 	
 🔰 මගහැරුනු පාඩම් වෙතොත් ඒ පිළිබඳව +94 76 132 7688 යන whatsApp අංකට මගහැරුනු පාඩම හා වීඩියෝව කුමක්දැයි කෙටිපණිවිඩයක් උඔමු කළ යුතුය.
 	
@@ -395,23 +395,23 @@ const connectToWA = () => {
 》 https://wa.me/94761327688
 	
 `
-	
-						const templateButtons = [
-							{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
-						]
-						const buttonMessage = {
-							caption: startmsg,
-							footer: config.FOOTER,
-							templateButtons: templateButtons,
-							image: { url: config.MY_LOGO }
-						}
-						await conn.sendMessage(from, buttonMessage)
+
+					const templateButtons = [
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
+					]
+					const buttonMessage = {
+						caption: startmsg,
+						footer: config.FOOTER,
+						templateButtons: templateButtons,
+						image: { url: config.MY_LOGO }
 					}
-						break
+					await conn.sendMessage(from, buttonMessage)
+				}
+					break
 
-						case 'about': {
+				case 'about': {
 
-							const startmsg = `*🍁 තුෂාන් ධර්මේන්ද්‍ර සර් ගැන 🍁*
+					const startmsg = `*🍁 තුෂාන් ධර්මේන්ද්‍ර සර් ගැන 🍁*
 		
 𓃰  ඔබගේ ගුරුවරයා, තුෂාන් ධර්මේන්ද්‍ර වන අතර ඔහු පහත සුදුසුකම් සපිරූ අයෙකි.
 		
@@ -429,19 +429,19 @@ const connectToWA = () => {
 
 🍁 Thank You 🍁
 ━━━━━━━━━━━`
-		
-							const templateButtons = [
-								{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
-							]
-							const buttonMessage = {
-								caption: startmsg,
-								footer: config.FOOTER,
-								templateButtons: templateButtons,
-								image: { url: config.MY_LOGO }
-							}
-							await conn.sendMessage(from, buttonMessage)
-						}
-							break
+
+					const templateButtons = [
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
+					]
+					const buttonMessage = {
+						caption: startmsg,
+						footer: config.FOOTER,
+						templateButtons: templateButtons,
+						image: { url: config.MY_LOGO }
+					}
+					await conn.sendMessage(from, buttonMessage)
+				}
+					break
 
 
 
