@@ -50,7 +50,6 @@
      "pg": "^8.5.1",  
      "jsdom": "^16.4.0",
      "sequelize" : "^6.19.0" ,
-     "yt-search": "^2.7.4",  
      "path": "^0.12.7",
      "moment-timezone": "^0.5.33",
     "node-fetch": "^2.6.1" ,
@@ -59,10 +58,10 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/edm-official/whatsapp-base"
+  "url": "git+https://github.com/nadith-git/combot"
  },
  "bugs": {
-  "url": "https://github.com/edm-official/whatsapp-base/issues"
+  "url": "https://github.com/nadith-git/combot"
  },
- "homepage": "https://github.com/edm-official/whatsapp-base"
+ "homepage": "https://github.com/nadith-git/combot"
 }
