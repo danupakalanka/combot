@@ -1,6 +1,6 @@
 {
  "name": "edmbase",
- "description": "Multi Device Whatsapp Base By NadithPro",
+ "description": "Multi Device Whatsapp Base By EDM",
  "version": "1.0.0",
  "main": "index.js",
  "scripts": {
@@ -16,10 +16,10 @@
   "bot-md",
   "multi-device"
  ],
- "author": "Budhdhika",
+ "author": "edm-official",
  "license": "MIT",
  "dependencies": {
-  "@adiwajshing/baileys": "git+https://github.com/vihangayt0/Baileys.git",
+  "@adiwajshing/baileys": "git+https://github.com/sanuwaofficial/Baileys.git",
     "simple-git": ">=3.5.0",
     "@adiwajshing/keyed-db": "^0.2.4",  
     "axios": "^0.24.0",
@@ -49,7 +49,8 @@
      "qs": "^6.10.1",
      "pg": "^8.5.1",  
      "jsdom": "^16.4.0",
-     "sequelize" : "^6.19.0" , 
+     "sequelize" : "^6.19.0" ,
+     "yt-search": "^2.7.4",  
      "path": "^0.12.7",
      "moment-timezone": "^0.5.33",
     "node-fetch": "^2.6.1" ,
@@ -58,10 +59,10 @@
  },
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/nadithpro/NadithPro-Bot-WA"
+  "url": "git+https://github.com/edm-official/whatsapp-base"
  },
  "bugs": {
-  "url": "https://github.com/nadithpro/NadithPro-Bot-WA"
+  "url": "https://github.com/edm-official/whatsapp-base/issues"
  },
- "homepage": "https://github.com/nadithpro/NadithPro-Bot-WA"
+ "homepage": "https://github.com/edm-official/whatsapp-base"
 }

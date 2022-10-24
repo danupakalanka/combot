@@ -1,7 +1,7 @@
 {
   "name": "edm bot base",
   "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/nadithpro/NadithPro-Bot-WA",
+  "repository": "https://github.com/edm-official/whatsapp-base",
   "logo": "",
   "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
   "env": {
@@ -15,7 +15,7 @@
         "ALIVE_LOGO" :{
     "description" : "alive logo",
     "required" : true,
-  "value" : "https://telegra.ph/file/5f2c2213e479a958564bd.jpg"
+  "value" : "https://img.phonandroid.com/2019/05/whatsapp-publicit%C3%A9s-2020.jpg"
     }
         
     },
