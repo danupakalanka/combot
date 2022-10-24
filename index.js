@@ -75,8 +75,7 @@ const connectToWA = () => {
 				case 'start':
 				case 'alive':
 				case 'sir':
-				case 'Start':
-				case 'Alive': {
+				case 'Start': {
 
 					const startmsg = `
 🔰 තුෂාන් ධර්මේන්ද්‍ර Online Accounting වෙත ඔබ සාදරයෙන් පිලිගනිමි.
@@ -114,6 +113,43 @@ const connectToWA = () => {
 				}
 					break
 
+					case 'alive': {
+
+						const startmsg = `
+	🔰 තුෂාන් ධර්මේන්ද්‍ර Online Accounting වෙත ඔබ සාදරයෙන් පිලිගනිමි.
+	
+	🔰 ඔබගේ අවශ්‍යතාවය පහත *'View Menu'* භාවිත කර තෝරාගන්න.
+	
+	🍁 Thank You 🍁
+	━━━━━━━━━━━`
+	
+						const sections = [
+							{
+								title: "🍁 තුෂාන් ධර්මේන්ද්‍ර Online Accounting 🍁",
+								rows: [
+									{ title: "☞︎︎︎  පන්තියට සහභාගීවන ආකාරය", rowId: prefix + 'howreg' },
+									{ title: "☞︎︎︎  පන්තියට ලියාපදිංචි වීමට", rowId: "creg" },
+									{ title: "☞︎︎︎  පන්ති ගාස්තු ගෙවීම", rowId: "pymnt" },
+									{ title: "☞︎︎︎  Group වලට Links ලබා ගැනීමට", rowId: "glinks" },
+									{ title: "☞︎︎︎  පංති ගාස්තු පිලිබද විස්තර", rowId: "cfees" },
+									{ title: "☞︎︎︎  පංති කාලසටහන", rowId: "ctable" },
+									{ title: "☞︎︎︎  නිබන්ධන ලබා ගන්නා ආකාරය", rowId: "tutesget" },
+									{ title: "☞︎︎︎  මගහැරුන පාඩම් ලබා ගැනීමට", rowId: "prevless" },
+									{ title: "☞︎︎︎  තුෂාන් ධර්මේන්ද්‍ර සර් ගැන", rowId: "about" }
+								]
+							}
+						]
+						const listMessage = {
+							text: startmsg,
+							footer: config.TVFOOTER,
+							title: "*🍁 🅆🄴🄻🄲🄾🄼🄴 🍁*",
+							buttonText: "View Menu",
+							sections
+						}
+							await conn.sendMessage(from, listMessage)
+					}
+						break
+
 				//......................................................How To Register..............................................................\\
 
 				case 'howreg': {
@@ -128,8 +164,7 @@ const connectToWA = () => {
  ━━━━━━━━━━`
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Start', id: prefix + 'start' } },
-						{ quickReplyButton: { displayText: 'Menu', id: prefix + 'promenu' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } },
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -157,8 +192,8 @@ const connectToWA = () => {
 ━━━━━━━━━━━`
 
 					const templateButtons = [
-						{ urlButton: { displayText: Form, url: "https://forms.gle/Lx11hrHtYxZLYh539" } },
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ urlButton: { displayText: Form, url: 'https://forms.gle/Lx11hrHtYxZLYh539' } },
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -182,7 +217,7 @@ const connectToWA = () => {
 ━━━━━━━━━━━`
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -227,7 +262,7 @@ const connectToWA = () => {
 ━━━━━━━━━━━`
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -263,7 +298,7 @@ const connectToWA = () => {
 `
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -304,7 +339,7 @@ const connectToWA = () => {
 `
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -336,7 +371,7 @@ const connectToWA = () => {
   `
 
 					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 					]
 					const buttonMessage = {
 						caption: startmsg,
@@ -364,7 +399,7 @@ const connectToWA = () => {
 `
 	
 						const templateButtons = [
-							{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+							{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 						]
 						const buttonMessage = {
 							caption: startmsg,
@@ -398,7 +433,7 @@ const connectToWA = () => {
 ━━━━━━━━━━━`
 		
 							const templateButtons = [
-								{ quickReplyButton: { displayText: 'Back', id: prefix + 'start' } }
+								{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
 							]
 							const buttonMessage = {
 								caption: startmsg,
