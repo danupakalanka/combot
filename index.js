@@ -15,7 +15,6 @@ const config = require('./config')
 const prefix = '.'
 const owner = ['94766866297']
 const axios = require('axios')
-const apk_link = require('./lib/playstore')
 const connectToWA = () => {
 	const conn = makeWASocket({
 		logger: P({ level: 'silent' }),
