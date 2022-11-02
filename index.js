@@ -107,8 +107,8 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await sock.sendMessage(from, { delete: response.key }),
-					await sock.sendMessage(from, { delete: response2.key })
+					await conn.sendMessage(from, { delete: response.key }),
+					await conn.sendMessage(from, { delete: response2.key })
 
 					const response = await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } })
 					const response2 = await conn.sendMessage(from, listMessage)
@@ -148,8 +148,8 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await sock.sendMessage(from, { delete: response.key }),
-					await sock.sendMessage(from, { delete: response2.key })
+					await conn.sendMessage(from, { delete: response.key }),
+					await conn.sendMessage(from, { delete: response2.key })
 
 					const response = await conn.sendMessage(from, listMessage)
 				}
