@@ -108,7 +108,7 @@ const connectToWA = () => {
 						sections
 					}
 
-					await conn.sendMessage(from, { image: { url: config.PRO_LOGO } })
+					await conn.sendMessage(from, { image: { url: config.MY_LOGO } })
 					await conn.sendMessage(from, listMessage)
 				}
 					break
