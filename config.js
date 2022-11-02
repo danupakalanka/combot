@@ -10,8 +10,8 @@ module.exports = {
 	ALIVE_MSG: process.env.ALIVE_MSG === undefined ? 'Alive Now' : process.env.ALIVE_MSG,
 	ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? `https://telegra.ph/file/5f2c2213e479a958564bd.jpg` : process.env.ALIVE_LOGO,
 
-	PRO_LOGO: process.env.PRO_LOGO === undefined ? 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' : process.env.PRO_LOGO,
-	MY_LOGO: process.env.MY_LOGO === undefined ? 'https://telegra.ph/file/c8fa7a59b5dc23131d603.jpg' : process.env.MY_LOGO,
+	PRO_LOGO: process.env.PRO_LOGO === undefined ? 'https://telegra.ph/file/58cf25199cd0c1dcd5695.jpg' : process.env.PRO_LOGO,
+	MY_LOGO: process.env.MY_LOGO === undefined ? 'https://telegra.ph/file/59ae30418cdc0f288a002.jpg' : process.env.MY_LOGO,
 
 	FOOTER: process.env.FOOTER === undefined ? 'ⒸPowered By @NadithPro' : process.env.FOOTER,
 	TVFOOTER: process.env.TVFOOTER === undefined ? 'ⒸPowered By @NadithPro' : process.env.TVFOOTER,
