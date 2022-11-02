@@ -107,8 +107,11 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } }),
-						await conn.sendMessage(from, listMessage)
+					await sock.sendMessage(from, { delete: response.key }),
+					await sock.sendMessage(from, { delete: response2.key })
+
+					const response = await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } })
+					const response2 = await conn.sendMessage(from, listMessage)
 				}
 					break
 
@@ -145,7 +148,10 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await conn.sendMessage(from, listMessage)
+					await sock.sendMessage(from, { delete: response.key }),
+					await sock.sendMessage(from, { delete: response2.key })
+
+					const response = await conn.sendMessage(from, listMessage)
 				}
 					break
 
@@ -209,52 +215,103 @@ const connectToWA = () => {
 
 					const startmsg = `🍁 පන්ති ගාස්තු ගෙවීම 🍁
 
-🔰 
+🔰 ප්‍රධාන *Menu* එකේ ඇති පංති ගාස්තු පිළිබඳ විස්තර කියවා බලා ඔබ සහභාගීවීමට බලාපොරොත්තු වන පංතියට අදාළ ගාස්තුව පහතින් ඇති *'Bank Accounts'* මඟින් ලබා දී ඇති ගිණුම් අංක වලට බැර කිරීමේ හැකියාව ඇත.
+
+🔰 ගාස්තු ගෙවීමෙන් පසුව ලැබෙන *SLIP* පතේ Photo එකක් +94 70 330 7716 අංකයට WhatsApp කළ යුතුය.
+
+》 https://wa.me/94703307716
+
+🔰 එමෙන්ම එම *SLIP* පතෙහි පහත සඳහන් තොරතුරු ඇතුළත් කළ යුතුය.
+
+   1) මුල් අකුරු සමඟ නම.
+   2) ලියාපදිංචි අංකය.
+   3) සහභාගී වන පංතිය
+   4) පංතියට සහභාගී වන මාසය.
 
 🍁 Thank You 🍁
 ━━━━━━━━━━━`
 
-					const templateButtons = [
-						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
+					const sections = [
+						{
+							title: "🍁 තුෂාන් ධර්මේන්ද්‍ර Online Accounting 🍁",
+							rows: [
+								{ title: "☞︎︎︎  NSB Bank", rowId: prefix + 'bnknsb' },
+								{ title: "☞︎︎︎  BOC Bank", rowId: "bnkboc" },
+								{ title: "☞︎︎︎  Peoples Bank", rowId: "bnkpeoples" },
+							]
+						}
 					]
-					const buttonMessage = {
-						caption: startmsg,
-						footer: config.FOOTER,
-						templateButtons: templateButtons,
-						image: { url: config.PRO_LOGO }
+					const listMessage = {
+						text: startmsg,
+						footer: config.TVFOOTER,
+						title: "*🍁 Bank Account Details 🍁*",
+						buttonText: "Bank Accounts",
+						sections
 					}
-					await conn.sendMessage(from, buttonMessage)
+					await conn.sendMessage(from, listMessage)
 				}
 					break
+
+					case 'bnknsb': {
+
+						const startmsg = `🍁 NSB BANK 🍁
+
+Name - SMTD SAMARATHUNGA
+
+Branch - MADAMPE
+
+Account No. - 107610112216
+`
+
+						await conn.sendMessage(from, { text: startmsg })
+					}
+						break
+
+						case 'bnkboc': {
+
+						const startmsg = `🍁 BOC BANK 🍁
+
+Name - DY VANNINAYAKA
+
+Branch - TABUTHTHEGAMA
+
+Account No. - 219200300013960
+`
+
+						await conn.sendMessage(from, { text: startmsg })
+					}
+						break
+
+						case 'bnkpeoples': {
+
+						const startmsg = `🍁 PEOPLES BANK 🍁
+
+Name - DY VANNINAYAKA
+
+Branch - CHILAW
+
+Account No. - 76800463
+`
+
+						await conn.sendMessage(from, { text: startmsg })
+					}
+						break
 
 				//......................................................Group Links..............................................................\\
 
 				case 'glinks': {
 
-					const startmsg = `🍁 Group වලට Links ලබා ගැනීමට 🍁
+					const startmsg = `🍁 Group වල Links ලබා ගැනීමට 🍁
 
-🔰 ඔබට සහභාගීවීමට අවශ්‍ය පන්තියට අදාල Group එක පහළින් තෝරා ඊට සම්බන්ධ වන්න.
+🔰 පහළින් ලබා දී ඇති Link එක මඟින් අපගේ WhatsApp Community එකට Join වෙන්න.
+
+🔰 ඒ හරහා අප, ඔබට අදාළ Group වල links සහ අවශ්‍ය කරන තොරතුරු එවනු ලැබේ.
 
 
-۞ A/L 2024 Theory | Accounting  》
+۞ WhatsApp Community Link  》
   
-》https://chat.whatsapp.com/GDgefl4KS8WC8NGFywxNBJ
-												
-۞ A/L 2023 Revision | Accounting  》
-  
-》https://chat.whatsapp.com/Hkbsqm2HQLsEecds4jTZMK
-												
-۞ O/L Commerce | Grade - 10  》
-  
-》https://chat.whatsapp.com/IUUKoR0YNj0KKailrErytA
-												
-۞ O/L Commerce | Grade - 11  》
-  
-》https://chat.whatsapp.com/DCdjRz5MmRd2UMdtcCzRtr
-												
-۞ IABF Accounting | IBSL Bank Exam  》
-  
-》https://chat.whatsapp.com/J8A4Ua8IsFN5Kph1G3zYYn
+》https://chat.whatsapp.com/
+
 
 🍁 Thank You 🍁
 ━━━━━━━━━━━`
@@ -279,7 +336,7 @@ const connectToWA = () => {
 					const startmsg = `*🍁 පංති ගාස්තු පිලිබද විස්තර 🍁*
 
 ۞ A/L 2024 Theory | Accounting  》
-	𓃰 Rs.
+	𓃰 Rs.1500 - Monthly
 												
 ۞ A/L 2023 Revision | Accounting  》
 	𓃰 Rs.
@@ -290,8 +347,9 @@ const connectToWA = () => {
 ۞ O/L Commerce | Grade - 11  》
 	𓃰 Rs.
 												
-۞ IABF Accounting | IBSL Bank Exam  》
-	𓃰 Rs.
+۞ IABF Accounting Cource | IBSL Bank Exam 》
+	𓃰 Rs.10000
+	*දෙවතාවකින් ගෙවිය හැක.
 
 `
 
@@ -315,8 +373,8 @@ const connectToWA = () => {
 					const startmsg = `*🍁 පංති කාලසටහන 🍁*
 
 ۞ A/L 2024 Theory | Accounting  》
-	𓃰 Date - 
-	𓃰 Time - 
+	𓃰 Date - FriDay
+	𓃰 Time - 8.00 - 10.00 p.m.
 												
 ۞ A/L 2023 Revision | Accounting  》
 	𓃰 Date - 
@@ -330,9 +388,9 @@ const connectToWA = () => {
 	𓃰 Date - 
 	𓃰 Time - 
 												
-۞ IABF Accounting | IBSL Bank Exam  》
-	𓃰 Date - 
-	𓃰 Time - 
+۞ IABF Accounting Cource | IBSL Bank Exam  》
+	𓃰 Date - SaturDay
+	𓃰 Time - 8.00 - 10.30 p.m.
 
 `
 
@@ -359,14 +417,14 @@ const connectToWA = () => {
 
 🔰 එම නිබන්ධන *PDF* ලෙස අදාළ WhatsApp Group වලට ලබා දෙනු ඇත.
 
-🔰 මුද්‍රණය කරන ලද නිබන්ධන ලබා ගැනීමට අපේක්ෂා කරන අයට, අදාළ නිබන්ධන *Cash On Delivery* ක්‍රමයට තැපැල් මාර්ගයෙන් +94 76 132 7688 යන WhatsApp අංකය හා සම්බන්ධ වීමෙන් ලබා ගැනීමමේ හැකියාව ඇත.
+🔰 මුද්‍රණය කරන ලද නිබන්ධන ලබා ගැනීමට අපේක්ෂා කරන අයට, අදාළ නිබන්ධන *Cash On Delivery* ක්‍රමයට තැපැල් මාර්ගයෙන් +94 70 330 7716 යන WhatsApp අංකය හා සම්බන්ධ වීමෙන් ලබා ගැනීමමේ හැකියාව ඇත.
 
 
 ۞ WhatsApp Number  》
 
-》 https://wa.me/94761327688
+》 https://wa.me/94703307716
 
-  `
+`
 
 					const templateButtons = [
 						{ quickReplyButton: { displayText: 'Back', id: prefix + 'alive' } }
@@ -385,14 +443,14 @@ const connectToWA = () => {
 
 					const startmsg = `*🍁 මගහැරුන පාඩම් ලබා ගැනීම 🍁*
 	
-🔰 මගහැරුනු පාඩම් වෙතොත් ඒ පිළිබඳව +94 76 132 7688 යන whatsApp අංකට මගහැරුනු පාඩම හා වීඩියෝව කුමක්දැයි කෙටිපණිවිඩයක් උඔමු කළ යුතුය.
+🔰 මගහැරුනු පාඩම් වෙතොත් ඒ පිළිබඳව +94 70 330 7716 යන WhatsApp අංකට මගහැරුනු පාඩම හා වීඩියෝව කුමක්දැයි කෙටිපණිවිඩයක් යොමු කළ යුතුය.
 	
 🔰 ඒවා ලබා ගැනීමට අවශ්‍ය ගාස්තු හා ක්‍රමවේදය එවිට දැනුවත් කරනු ලැබේ.
 	
 	
 ۞ WhatsApp Number  》
 	
-》 https://wa.me/94761327688
+》 https://wa.me/94703307716
 	
 `
 
