@@ -108,7 +108,7 @@ const connectToWA = () => {
 						sections
 					}
 
-					await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } })
+					await conn.sendMessage(from, { image: { url: config.PRO_LOGO } })
 					await conn.sendMessage(from, listMessage)
 				}
 					break
