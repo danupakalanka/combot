@@ -107,11 +107,9 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await conn.sendMessage(from, { delete: response.key }),
-					await conn.sendMessage(from, { delete: response2.key })
 
-					const response = await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } })
-					const response2 = await conn.sendMessage(from, listMessage)
+					await conn.sendMessage(from, { image: { url: 'https://telegra.ph/file/8b8d49a533ae75d867f59.jpg' } })
+					await conn.sendMessage(from, listMessage)
 				}
 					break
 
@@ -148,10 +146,8 @@ const connectToWA = () => {
 						buttonText: "View Menu",
 						sections
 					}
-					await conn.sendMessage(from, { delete: response.key }),
-					await conn.sendMessage(from, { delete: response2.key })
 
-					const response = await conn.sendMessage(from, listMessage)
+					await conn.sendMessage(from, listMessage)
 				}
 					break
 
@@ -360,7 +356,7 @@ Account No. - 76800463
 						caption: startmsg,
 						footer: config.FOOTER,
 						templateButtons: templateButtons,
-						image: { url: config.MY_LOGO }
+						image: { url: config.PRO_LOGO }
 					}
 					await conn.sendMessage(from, buttonMessage)
 				}
@@ -401,7 +397,7 @@ Account No. - 76800463
 						caption: startmsg,
 						footer: config.FOOTER,
 						templateButtons: templateButtons,
-						image: { url: config.MY_LOGO }
+						image: { url: config.PRO_LOGO }
 					}
 					await conn.sendMessage(from, buttonMessage)
 				}
@@ -433,7 +429,7 @@ Account No. - 76800463
 						caption: startmsg,
 						footer: config.FOOTER,
 						templateButtons: templateButtons,
-						image: { url: config.MY_LOGO }
+						image: { url: config.PRO_LOGO }
 					}
 					await conn.sendMessage(from, buttonMessage)
 				}
@@ -461,7 +457,7 @@ Account No. - 76800463
 						caption: startmsg,
 						footer: config.FOOTER,
 						templateButtons: templateButtons,
-						image: { url: config.MY_LOGO }
+						image: { url: config.PRO_LOGO }
 					}
 					await conn.sendMessage(from, buttonMessage)
 				}
